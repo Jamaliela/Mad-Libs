@@ -2,7 +2,7 @@
 # Author: Dr. Scott Heggen      TODO: Change this to your names
 # Username: heggens             TODO: Change this to your usernames
 #
-# Assignment: T9: Mad Libs
+# Assignment: T09: Mad Libs
 #
 # Purpose: A palindrome is a word, phrase, number, or other sequence of characters
 # which reads the same backward and forward.  This program tests phrases
@@ -48,19 +48,28 @@ def is_palindrome_test_suite():
     """
     print("\nRunning is_palindrome_test_suite().")
 
+    print("\n----------------------------------")
     # Testing that non-palindrome's fail
-    testit(is_palindrome("This is a palindrome--NOT!")==False)
-    testit(is_palindrome("No")==False)
+    print("Testing non-palindromes")
+    testit(is_palindrome("This is a palindrome--NOT!") == False)
+    testit(is_palindrome("No") == False)
 
+    print("\n----------------------------------")
     # Testing that actual palindromes pass
-    testit(is_palindrome("Nurses RUN!!!")==True)
-    testit(is_palindrome("Mr. Owl ate my metal worm...")==True)
-    testit(is_palindrome("Ogre, flog a golfer. GO!")==True)
-    testit(is_palindrome("Was it a car or a cat I saw?")==True)
-    testit(is_palindrome('A dog! A panic in a pagoda!')==True)
+    print("Testing palindromes")
+    testit(is_palindrome("Nurses RUN!!!") == True)
+    testit(is_palindrome("Mr. Owl ate my metal worm...") == True)
+    testit(is_palindrome("Ogre, flog a golfer. GO!") == True)
+    testit(is_palindrome("Was it a car or a cat I saw?") == True)
+    testit(is_palindrome('A dog! A panic in a pagoda!') == True)
 
+    print("\n----------------------------------")
+    # Testing that punctuation gets removed properly
+    print("Testing punctuation remover")
     testit(remove_punctuation("No Punctuation!") == "NoPunctuation")
-    print("Run of is_palindrome_test_suite() complete.\n")
+    testit(remove_punctuation("h!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ i") == "hi")
+
+    print("\nRun of is_palindrome_test_suite() complete.\n")
 
 
 def remove_punctuation(s):
@@ -71,6 +80,7 @@ def remove_punctuation(s):
     :return: A string with no punctuation
     """
     # modified from http://www.ict.ru.ac.za/Resources/cspw/thinkcspy3/thinkcspy3_latest/strings.html
+
     punctuation = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ "     # space added
     s_sans_punct = ""           # empty string
     for letter in s:
@@ -89,23 +99,40 @@ def is_palindrome(the_str):
     """
     lowerinput = the_str.lower()
     nopunctinput = remove_punctuation(lowerinput)
-    #print(nopunctinput)                         # for testing purposes only --remove comment to see nopunctinput
+    # print(nopunctinput)                         # for testing purposes only --remove comment to see nopunctinput
     return nopunctinput == nopunctinput[::-1]    # this is a fancy way to traverse the string forward and backwards
 
 
-def interactive_is_palindrome_tester():
+def interactive_test_mode_1():
     """
-    Interactive_is_palindrome_tester() requests two inputs from the user and runs a sentence through is_palindrome()
+    Interactive mode 1 requests two inputs from the user and runs a sentence through is_palindrome()
     tester. This method of testing is NOT as effective as a test_suite.  Do you see why?
 
     :return: None
     """
+    builder = []
+
     input1 = input("Enter a three letter name: ")
     input2 = input("Enter a three letter name: ")
 
-    builder=[input1, input2]
-    buildit="'{0}, {1}, note: I dissent! A fast never prevents a fatness. I diet on {1}, {0}!!'".format(builder[0],builder[1])
-    #buildit=raw_input('Enter possible palindrome for testing:\n')
+    builder.append(input1)
+    builder.append(input2)
+    buildit = "'{0}, {1}, note: I dissent! A fast never prevents a fatness. I diet on {1}, {0}!!'".format(builder[0], builder[1])
+
+    if is_palindrome(buildit):
+        print(buildit + ' is a palindrome.')
+    else:
+        print(buildit + ' is not a palindrome.')
+
+
+def interactive_test_mode_2():
+    """
+    Another interactive mode for testing palindromes. Still, not as effective as the test suite. Do you agree?
+
+    :return: None
+    """
+
+    buildit = input('Enter possible palindrome for testing:\n')
 
     if is_palindrome(buildit):
         print(buildit + ' is a palindrome.')
@@ -120,7 +147,9 @@ def main():
     :return: None
     """
     is_palindrome_test_suite()        # Uncomment this line to run the test suite
-    # interactive_is_palindrome_tester()  # Uncomment this line to run the interactive mode
+    # interactive_test_mode_1()  # Uncomment this line to run the interactive mode 1
+    # interactive_test_mode_2()  # Uncomment this line to run the interactive mode 2
+
 
 if __name__ == "__main__":
     main()          # calls the main() function
