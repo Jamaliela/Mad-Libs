@@ -1,29 +1,41 @@
 #################################################################################
-# Header Block
+# Author:
+# Username:
+#
+# Assignment:
+# Purpose:
+#################################################################################
+# Acknowledgements:
+#
+#
 #################################################################################
 
-# import statements
+import turtle
 
 
-# Function definitions
-def fun_1(input_param_1):
-    """Docstring for fun_1"""
+def function_1():
+    """
+    Docstring for function_1
+    """
     pass
+    # ...
 
 
-def fun_2(input_param_2):
-    """Docstring for fun_2"""
+def function_2():
+    """
+    Docstring for function_2
+    """
     pass
+    # ...
 
-# Main function definition
+
 def main():
     """
     Docstring for main
     """
+    # ...
+    function_1()            # Function call to function_1
+    function_2()            # Function call to function_2
 
-    pass
 
-
-# Call to main function
-if __name__ == "__main__":
-    main()
+main()

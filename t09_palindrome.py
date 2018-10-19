@@ -1,6 +1,6 @@
 ######################################################################
-# Author: Dr. Scott Heggen      TODO: Change this to your names
-# Username: heggens             TODO: Change this to your usernames
+# Author: Scott Heggen & Emily Lovell      TODO: Change this to your names
+# Username: heggens & lovelle             TODO: Change this to your usernames
 #
 # Assignment: T09: Mad Libs
 #
@@ -14,7 +14,8 @@
 #
 # Modified from the remove punctuation function
 #   from http://www.ict.ru.ac.za/Resources/cspw/thinkcspy3/thinkcspy3_latest/strings.html
-# palindromes from http://www.buzzfeed.com/fjelstud/the-21-best-palindromes
+#
+# Palindromes from http://www.buzzfeed.com/fjelstud/the-21-best-palindromes
 #
 # licensed under a Creative Commons
 # Attribution-Noncommercial-Share Alike 3.0 United States License.
@@ -97,10 +98,10 @@ def is_palindrome(the_str):
     :param the_str: a string suspected of palindrome-ness
     :return: A Boolean representing if the string is a palindrome or not
     """
-    lowerinput = the_str.lower()
-    nopunctinput = remove_punctuation(lowerinput)
+    lower_input = the_str.lower()
+    no_punct_input = remove_punctuation(lower_input)
     # print(nopunctinput)                         # for testing purposes only --remove comment to see nopunctinput
-    return nopunctinput == nopunctinput[::-1]    # this is a fancy way to traverse the string forward and backwards
+    return no_punct_input == no_punct_input[::-1]    # this is a fancy way to traverse the string forward and backwards
 
 
 def interactive_test_mode_1():
@@ -110,19 +111,16 @@ def interactive_test_mode_1():
 
     :return: None
     """
-    builder = []
 
     input1 = input("Enter a three letter name: ")
     input2 = input("Enter a three letter name: ")
 
-    builder.append(input1)
-    builder.append(input2)
-    buildit = "'{0}, {1}, note: I dissent! A fast never prevents a fatness. I diet on {1}, {0}!!'".format(builder[0], builder[1])
+    build_sentence = "'{0}, {1}, note: I dissent! A fast never prevents a fatness. I diet on {1}, {0}!!'".format(input1, input2)
 
-    if is_palindrome(buildit):
-        print(buildit + ' is a palindrome.')
+    if is_palindrome(build_sentence):
+        print(build_sentence + ' is a palindrome.')
     else:
-        print(buildit + ' is not a palindrome.')
+        print(build_sentence + ' is not a palindrome.')
 
 
 def interactive_test_mode_2():
@@ -132,12 +130,12 @@ def interactive_test_mode_2():
     :return: None
     """
 
-    buildit = input('Enter possible palindrome for testing:\n')
+    build_sentence = input('Enter possible palindrome for testing:\n')
 
-    if is_palindrome(buildit):
-        print(buildit + ' is a palindrome.')
+    if is_palindrome(build_sentence):
+        print(build_sentence + ' is a palindrome.')
     else:
-        print(buildit + ' is not a palindrome.')
+        print(build_sentence + ' is not a palindrome.')
 
 
 def main():
