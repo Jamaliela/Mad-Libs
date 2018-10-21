@@ -32,8 +32,13 @@ def main():
     Docstring for main
     """
     # ...
-    function_1()            # Function call to function_1
-    function_2()            # Function call to function_2
+    list = ("lastname", "bodypart", "ingverb", "adjective", "animal", "adjective2", "yourname")
+    for i in range(7):
+        print(str(input("Please enter your" , list(i)),
+
+    # function_1()            # Function call to function_1
+    # function_2()            # Function call to function_2
 
 
-main()
+
+main()         # calls the main() function

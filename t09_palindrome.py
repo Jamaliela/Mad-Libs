@@ -1,6 +1,6 @@
 ######################################################################
-# Author: Scott Heggen & Emily Lovell      TODO: Change this to your names
-# Username: heggens & lovelle             TODO: Change this to your usernames
+# Author: Scott Heggen & Emily Lovell      jamalie
+# Username: heggens & lovelle             alfarozavalae
 #
 # Assignment: T09: Mad Libs
 #
