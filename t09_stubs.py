@@ -42,3 +42,15 @@ def main():
 
 
 main()         # calls the main() function
+
+
+#
+# Dear professor _______ lastname
+# I wanted to let you know that I will not be able to attend class today because I broke my ________ bodypart
+# When I was ___________ verb in ing form the sofa.
+#  I feel very ________ adjective  that I will miss your lecture.
+# Also, last week, I did not submit the homework in Github because my __________ animal
+# ate the paper I was working the algorithm on.
+# I apologize for being such a _________ adjective student.
+# Best,
+# _________ yourname
