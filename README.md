@@ -1,11 +1,10 @@
 # T09: Mad Libs
 
-Name 1: ____________
+Name 1: Ela Jamali
 
-Name 2: ____________
+Name 2: Emely Alfaro
 
-Name 3 (if needed): ____________
+Repository Link: https://github.com/fall-2018-csc-226/t09-mad-libs-alfaro-jamali-t09.git
 
-Repository Link: ______________
 
-Google Document Link: ______________
+Google Document Link: https://docs.google.com/document/d/1FLxOYZkxE8lGG48RVG_BwqIHhwkqgZ8F1SjdeKHxRMc/edit?usp=sharing
